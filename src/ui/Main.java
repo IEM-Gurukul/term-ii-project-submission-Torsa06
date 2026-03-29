@@ -35,10 +35,18 @@ public class Main {
             ui.showMainMenu();
             int choice = input.readInt("  Select option: ", 0, 3);
             switch (choice) {
-                case 1 -> handleStudentMenu(input, ui, mgr);
-                case 2 -> handleAttendanceMenu(input, ui, mgr);
-                case 3 -> handleReportsMenu(input, ui, mgr);
-                case 0 -> running = false;
+                case 1:
+                    handleStudentMenu(input, ui, mgr);
+                    break;
+                case 2:
+                    handleAttendanceMenu(input, ui, mgr);
+                    break;
+                case 3:
+                    handleReportsMenu(input, ui, mgr);
+                    break;
+                case 0:
+                    running = false;
+                    break;
             }
         }
 
@@ -53,14 +61,24 @@ public class Main {
             ui.showStudentMenu();
             int choice = input.readInt("  Select option: ", 0, 5);
             switch (choice) {
-                case 1 -> registerStudent(input, ui, mgr);
-                case 2 -> {
+                case 1:
+                    registerStudent(input, ui, mgr);
+                    break;
+                case 2:
                     ui.printStudentList(mgr.getAllStudents());
-                }
-                case 3 -> searchById(input, ui, mgr);
-                case 4 -> searchByName(input, ui, mgr);
-                case 5 -> removeStudent(input, ui, mgr);
-                case 0 -> back = true;
+                    break;
+                case 3:
+                    searchById(input, ui, mgr);
+                    break;
+                case 4:
+                    searchByName(input, ui, mgr);
+                    break;
+                case 5:
+                    removeStudent(input, ui, mgr);
+                    break;
+                case 0:
+                    back = true;
+                    break;
             }
         }
     }
@@ -129,12 +147,24 @@ public class Main {
             ui.showAttendanceMenu();
             int choice = input.readInt("  Select option: ", 0, 5);
             switch (choice) {
-                case 1 -> markSingle(input, ui, mgr);
-                case 2 -> markAll(input, ui, mgr);
-                case 3 -> updateRecord(input, ui, mgr);
-                case 4 -> viewHistory(input, ui, mgr);
-                case 5 -> viewByDate(input, ui, mgr);
-                case 0 -> back = true;
+                case 1:
+                    markSingle(input, ui, mgr);
+                    break;
+                case 2:
+                    markAll(input, ui, mgr);
+                    break;
+                case 3:
+                    updateRecord(input, ui, mgr);
+                    break;
+                case 4:
+                    viewHistory(input, ui, mgr);
+                    break;
+                case 5:
+                    viewByDate(input, ui, mgr);
+                    break;
+                case 0:
+                    back = true;
+                    break;
             }
         }
     }
@@ -222,10 +252,18 @@ public class Main {
             ui.showReportsMenu();
             int choice = input.readInt("  Select option: ", 0, 3);
             switch (choice) {
-                case 1 -> reportSingle(input, ui, mgr);
-                case 2 -> reportAll(ui, mgr);
-                case 3 -> reportLowAttendance(input, ui, mgr);
-                case 0 -> back = true;
+                case 1:
+                    reportSingle(input, ui, mgr);
+                    break;
+                case 2:
+                    reportAll(ui, mgr);
+                    break;
+                case 3:
+                    reportLowAttendance(input, ui, mgr);
+                    break;
+                case 0:
+                    back = true;
+                    break;
             }
         }
     }
